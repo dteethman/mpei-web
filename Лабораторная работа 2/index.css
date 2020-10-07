@@ -1,0 +1,105 @@
+/* селектор body захватывет все элементы (теги, классы) с названием body */
+body {
+    /* свойство font-family указывает какой шрифт использовать. В данном случае - системный */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.h1 {
+    color: red;
+    text-align: center;
+
+}
+
+.h1__span {
+    color: green;
+    text-align: right;
+    display: block;
+}
+
+.img {
+    display: block;
+    margin: 0 auto;
+    border: 5px solid black;
+}
+
+.separator {
+    height: 5px;
+    box-shadow: 0 2px 5px -1px black;
+    background-color: black;
+    border: none;
+}
+
+.separator_red {
+    background-color: rgb(177, 70, 70);
+}
+
+.separator_violet {
+    background-color: rgb(112, 48, 160);
+}
+
+.left-aligned-paragraph {
+    text-align: left;
+}
+
+.right-aligned-paragraph {
+    text-align: right;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+.cyan-text {
+    color: rgb(0, 176, 240);
+}
+
+.red-text {
+    color: red;
+}
+
+.violet-text {
+    color: rgb(112, 48, 160);
+}
+
+.green-text {
+    color: rgb(0, 176, 80);
+}
+
+.blue-text {
+    color: rgb(0, 112, 192);
+}
+
+.normal-text {
+    font-weight: normal;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.underlined-text {
+    text-decoration: underline;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table__cell {
+    border: 1px solid black;
+    padding: 3px 3px;
+    vertical-align: top;
+    background-color:rgb(249,234,219);
+}
+
+.table__cell:nth-child(4n), .table__cell:nth-child(5n) {
+    background-color:rgb(198,214,162);
+}
+
+.table__cell_code {
+    font-style: italic;
+}
+
+.table__list {
+    margin: 0;
+}
