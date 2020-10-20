@@ -1,0 +1,48 @@
+<!-- Актуальный справочник по HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference -->
+<!-- Сверстано по методологии БЭМ: https://ru.bem.info/methodology/ -->
+
+<!-- Сообщение браузеру об использовании спецификации html -->
+<!DOCTYPE html>
+<!-- Корневой тег html, атрибут языка русский -->
+<html lang="ru">
+
+<!-- Тег head содержит мета информацию -->
+<head>
+  <!-- Тег meta, атрибут charset устанавливает кодировку UTF-8 -->
+  <meta charset="UTF-8">
+  <!-- Тег meta, атрибут name сообщает браузеру о ширине страницы по ширине устройства и масштаб -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Тег link подключает css-файл index.css -->
+  <link rel="stylesheet" href="index.css">
+  <!-- Тег title устанавливает заголовок страницы -->
+  <title>Табличная верстка</title>
+</head>
+
+<body class="body">
+    <h3>1.</h3>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="table__cell text_center-aligned text_large text_bold text_red">text</td>
+                <td class="table__cell table__cell_blue-bg">text</td>
+                <td class="table__cell table__cell_green-bg table__cell_vertical-centred text_center-aligned" rowspan="2">text</td>
+            </tr>
+            <tr>
+                <td class="table__cell table__cell_orange-border table__cell_vertical-centred unordered-list_disc">
+                    <ul class="unordered-list_disc list_centred">
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                    </ul>
+                </td>
+                <td class="table__cell"><img class="image" src="img/chrysanthemum.png" alt="Хризантема"></td>
+            </tr>
+            <tr>
+                <td class="table__cell text_center-aligned"><a href="img/chrysanthemum.png">text</a></td>
+                <td class="table__cell text_center-aligned text_large text_italic">text</td>
+                <td class="table__cell text_right-aligned">text</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

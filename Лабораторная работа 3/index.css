@@ -1,0 +1,133 @@
+/* Класс элемента body */
+.body {
+    /* Семейство шрифта: системный */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Класс изображений */
+.image {
+    /* Режим отображения: блок */
+    display: block;
+    /* Внешний отступ: сверху и снизу 0, слева и справа автоматически*/
+    margin: 7px;
+
+    height: 150px;
+
+    width: 200px
+}
+
+/*
+ * Оформление ячеек
+ */
+
+ /* Класс элемента table */
+.table {
+    /* Отображение границ ячеек: без отступов */
+    border-collapse: collapse;
+}
+
+ /* Класс ячеек таблицы */
+.table__cell {
+    /* Граница элемента: толщина 1px, линия без пунктира, черный цвет */
+    border: 1px solid black;
+    /* Выравнивание по вертикали: верхняя граница. Работает только в таблицах */
+    vertical-align: top;
+
+    padding: 5px;
+
+    height: 29px;
+
+    width: 137px;
+
+    font-size: 12px;
+}
+
+.table__cell_vertical-centred {
+    /* Выравнивание по вертикали: центр. Работает только в таблицах */
+  vertical-align: middle;
+}
+
+.table__cell_orange-border {
+    border: 3px solid #F4C243;
+}
+
+.table__cell_blue-bg {
+    background-color: #4EAEEA;
+}
+
+.table__cell_green-bg {
+    background-color: #4FAD5B;
+}
+
+/*
+ * Оформление текста
+ */
+
+ /* Размеры */
+
+.text_large {
+     font-size: 22px;
+}
+
+/* Начертания */
+
+.text_bold {
+    font-weight: bold;
+}
+
+.text_italic {
+    font-style: italic;
+}
+
+ /* Выравнивание */
+
+.text_center-aligned {
+    text-align: center;
+}
+
+.text_right-aligned {
+    text-align: right;
+}
+
+/* Цветной текст */
+  
+.text_red {
+    /* Цвет текста: красный */
+    color: red;
+}
+
+/*
+ * Списки
+ */
+
+.list_centred {
+    /* Режим отображения: таблица */
+    display: table;
+    /* Внешний отступ: сверху и снизу 0, слева и справа автоматически*/
+    margin: 0 auto;
+}
+
+.unordered-list_disc {
+    /* Тип маркера: круг */
+    list-style-type: disc;
+}
+  
+.unordered-list_square {
+    /* Тип маркера: квадрат */
+    list-style-type: square;
+}
+  
+.unordered-list_circle {
+    /* Тип маркера: окружность */
+    list-style-type: circle;
+}
+  
+.ordered-list_A {
+    /* Тип маркера: заглавные буквы алфавита */
+    list-style-type: upper-alpha;
+}
+  
+.ordered-list_i {
+    /* Тип маркера: маленькие римские цифры */
+    list-style-type: lower-roman;
+}
