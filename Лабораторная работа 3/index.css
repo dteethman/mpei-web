@@ -42,14 +42,24 @@
     font-size: 12px;
 }
 
+/* Выравнивание */
+
 .table__cell_vertical-centred {
     /* Выравнивание по вертикали: центр. Работает только в таблицах */
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
+/* Границы */
 
 .table__cell_orange-border {
     border: 3px solid #F4C243;
 }
+
+.table__cell_black-border {
+    border: 3px solid black;
+}
+
+/* Цвет фона */
 
 .table__cell_blue-bg {
     background-color: #4EAEEA;
@@ -58,6 +68,7 @@
 .table__cell_green-bg {
     background-color: #4FAD5B;
 }
+
 
 /*
  * Оформление текста
@@ -79,7 +90,7 @@
     font-style: italic;
 }
 
- /* Выравнивание */
+/* Выравнивание */
 
 .text_center-aligned {
     text-align: center;
@@ -130,4 +141,9 @@
 .ordered-list_i {
     /* Тип маркера: маленькие римские цифры */
     list-style-type: lower-roman;
+}
+
+.ordered-list_numeric {
+    /* Тип маркера: арабские цифры */
+    list-style-type: decimal;
 }
