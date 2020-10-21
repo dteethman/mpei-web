@@ -534,19 +534,25 @@
     <table class="table">
         <tbody>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_orange-bg"><a href="img/chrysanthemum.png">text</a></td>
+                <td class="table__cell table__cell_lavender-bg text_right-aligned">text</td>
+                <td class="table__cell table__cell_vertical-centred" rowspan="3">
+                    <ol class="ordered-list_numeric list_centred">
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                    </ol>
+                </td>
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_black-border text_center-aligned text_large text_red text_italic" colspan="2">text</td>
+
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell"><img src="img/chrysanthemum.png" alt="Хризантема" class="image"></td>
+                <td class="table__cell table__cell_vertical-centred text_right-aligned text_bold text_large">text</td>
             </tr>
         </tbody>
     </table>
@@ -556,19 +562,23 @@
     <table class="table">
         <tbody>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_lavender-bg table__cell_vertical-centred text_center-aligned">
+                    <a href="img/coast.png">text</a>
+                </td>
+                <td class="table__cell"><img src="img/coast.png" alt="Побережье" class="image"></td>
+                <td class="table__cell table__cell_vertical-centred" rowspan="2">
+                    <ul class="unordered-list_circle list_centred">
+                        <li>text</li>
+                        <li>text</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell">text</td>
+                <td class="table__cell text_large text_right-aligned text_italic">text</td>
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_orange-bg text_large text_center-aligned text_red text_bold" colspan="3">text</td>
             </tr>
         </tbody>
     </table>
@@ -578,19 +588,23 @@
     <table class="table">
         <tbody>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_lavender-bg">text</td>
+                <td class="table__cell table__cell_black-border text_center-aligned" colspan="2"><a href="img/jellyfish.png">text</a></td>
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell table__cell_vertical-centred" colspan="2">
+                    <ol class="ordered-list_A list_centred">
+                        <li>text</li>
+                        <li>text</li>
+                        <li>text</li>
+                    </ol>
+                </td>
+                <td class="table__cell"><img src="img/jellyfish.png" alt="Медуза" class="image"></td>
             </tr>
             <tr>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
-                <td class="table__cell"></td>
+                <td class="table__cell text_right-aligned text_large text_bold">text</td>
+                <td class="table__cell table__cell_orange-bg text_center-aligned text_large text_italic text_red">text</td>
+                <td class="table__cell text text_center-aligned">text</td>
             </tr>
         </tbody>
     </table>
@@ -823,6 +837,7 @@
                 <td class="table__cell table__cell_orange-bg text_large text_center-aligned text_red text_italic" colspan="2">text</td>
             </tr>
             <tr>
+                <!-- Грязный хак с созданием невидимой строки, иначе колспан превращает таблицу в 3*2 Паддинг по горизонтали обязательно должен быть равен паддингу остальных ячеек, иначе все уедет в Казахстан -->
                 <td class="table__cell" style="border: none; padding: 0 5px;"></td>
                 <td class="table__cell" style="border: none; padding: 0 5px;"></td>
                 <td class="table__cell" style="border: none; padding: 0 5px;"></td>
