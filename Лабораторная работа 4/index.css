@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Fira Sans';
+    font-weight: 400;
+    src: url('fonts/FiraSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Fira Sans';
+    font-weight: 500;
+    src: url('fonts/FiraSans-Medium.ttf');
+}
+  
+@font-face {
+    font-family: 'Fira Sans';
+    font-weight: 700;
+    src: url('fonts/FiraSans-Bold.ttf');
+}
+
+/* Класс элемента body */
+.body {
+    /* Семейство шрифта: системный */
+    width: 1000px;
+    margin: 0 auto;
+    font-family: 'Fira Sans'
+}
+
+.h1 {
+    font-size: 60px;
+    margin-top: 10px;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 6fr 5fr;
+    grid-gap: 100px;
+}
+
+.image, .form, .label {
+    display: block;
+    width: 100%;
+}
+
+.label__text {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.textarea {
+    width: 100%;
+    resize: none;
+}

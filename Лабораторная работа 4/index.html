@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="body">
+    <div class="container">
+        <div>
+            <h1 class="h1">Открыткиватель</h1>
+            <img src="img/1.png" alt="Рамка 1" class="image">
+        </div>
+        <form action="" class="form" id="form">
+            <label class="label">
+                <span class="label__text">Рамка</span>
+                <select name="border" id="border">
+                    <option selected value="img/1.png">Жизнерадостная</option>
+                    <option value="img/2.jpg">Романтическая</option>
+                    <option value="img/3.png">Торжественная</option>
+                    <option value="img/4.png">Нежная</option>
+                    <option value="img/5.png">Блистательная</option>
+                </select>
+            </label>
+            <label class="label">
+                <input checked type="checkbox" name="greeting" id="greeting">
+                <span>Обращение</span>
+            </label>
+            <label class="label">
+                <input checked type="radio" name="gender" id="gender_male" value="male">
+                <span>Дорогой</span>
+            </label>
+            <label class="label">
+                <input type="radio" name="gender" id="gender_female" value="female">
+                <span>Дорогая</span>
+            </label>
+            <label class="label">
+                <input type="text" name="person" id="person" placeholder="Вениамин Семенович">
+            </label>
+            <label for="" class="label">
+                <span class="label__text">Текст поздравления</span>
+                <textarea name="message" id="message" cols="25" rows="6" class="textarea"></textarea>
+            </label>
+            <label for="" class="label">
+                <span class="label__text">Секретный пароль</span>
+                <input type="password" name="password" id="password">
+            </label>
+            <div class="buttons">
+                <input type="reset" value="Сбросить" id="reset">
+                <input type="submit" value="Сгенерировать" id="submit">
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
