@@ -1,3 +1,5 @@
+/* Актуальный справочник по CSS: https://developer.mozilla.org/ru/docs/Web/JavaScript */
+
 // создание обработчика события изменения элемента выпадающего списка с id border
 border.addEventListener('change', e => {
     // сменить атрибут src у всех элементов класса image в документе на значение выпадающего списка

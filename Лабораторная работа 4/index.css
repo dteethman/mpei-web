@@ -1,54 +1,345 @@
+/* Актуальный справочник по CSS: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference */
+/* Сверстано по методологии БЭМ: https://ru.bem.info/methodology/ */
+
+/* Подключение шрифта */
 @font-face {
+    /* Семейство шрифтов: Fira Sans */
     font-family: 'Fira Sans';
+    /* Толщина шрифта: 400 */
     font-weight: 400;
+    /* Путь к шрифту */
     src: url('fonts/FiraSans-Regular.ttf');
 }
 
+/* Подключение шрифта */
 @font-face {
+    /* Семейство шрифтов: Fira Sans */
     font-family: 'Fira Sans';
+    /* Толщина шрифта: 500 */
     font-weight: 500;
+    /* Путь к шрифту */
     src: url('fonts/FiraSans-Medium.ttf');
 }
-  
+
+/* Подключение шрифта */
 @font-face {
+    /* Семейство шрифтов: Fira Sans */
     font-family: 'Fira Sans';
+    /* Толщина шрифта: 700 */
     font-weight: 700;
+    /* Путь к шрифту */
     src: url('fonts/FiraSans-Bold.ttf');
 }
 
 /* Класс элемента body */
 .body {
-    /* Семейство шрифта: системный */
+    /* Ширина: 1000px*/
     width: 1000px;
+    /* Внешний отступ: сверху и снизу 0, слева и справа автоматически*/
     margin: 0 auto;
+    /* Семейство шрифта: Fira Sans */
     font-family: 'Fira Sans'
 }
 
+/* Класс элемента h1 */
 .h1 {
+    /* Размер шрифта: 60 px */
     font-size: 60px;
+    /* Внешний отступ сверху: 10 px */
     margin-top: 10px;
-
 }
 
+/* Класс элемента container */
 .container {
+    /* Режим отображения: сетка */
     display: grid;
+    /* Количиство и ширина колонок: 2 колонки в пропорции 6 к 5 */
     grid-template-columns: 6fr 5fr;
+    /* Расстояние между элементами сетки: 100px */
     grid-gap: 100px;
 }
 
+/* Класс элементов image, form, label */
 .image, .form, .label {
+    /* Режим отображения: блок */
     display: block;
+    /* Ширина: 100% */
     width: 100%;
 }
 
+/* Класс элемента form */
+.form {
+    /* Внешний отступ сверху: 10 px */
+    margin-top: 10px;
+}
+
+/* Класс элемента label */
+.label {
+    /* Позиционирование: относительное */
+    position: relative;
+    /* Внешний отступ сверху: 20 px */
+    margin-top: 20px;
+}
+
+/* Класс элемента label__text */
 .label__text {
+    /* Режим отображения: блок */
     display: block;
+    /* Размер шрифта: 16 px */
     font-size: 16px;
+    /* Толщина шрифта: 500 */
     font-weight: 500;
+    /* Внешний отступ снизу: 7 px */
     margin-bottom: 7px;
 }
 
-.textarea {
+/* Класс элемента label_select */
+.label_select {
+    /* Позиционирование: относительное */
+    position: relative;
+}
+
+/* Класс элемента select */
+.select {
+    /* Стандартное офрмление (вебкит): отключить */
+    -webkit-appearance: none;
+    /* Стандартное офрмление (мозилла): отключить */
+    -moz-appearance: none;
+    /* Стандартное офрмление: отключить */
+    appearance: none;
+    /* Стандартное офрмление (микрософт): отключить */
+    -ms-appearance: none;
+    /* Ширина: 100% */
     width: 100%;
+    /* Высота: 40px */
+    height: 40px;
+    /* Размер шрифта: 16 px */
+    font-size: 16px;
+    /* Семейство шрифта: Fira Sans */
+    font-family: 'Fira Sans';
+    /* Внутренний отступ: 10px */
+    padding: 10px;
+    /* Граница элемента: толщина 1px, линия без пунктира, серый цвет */
+    border: 1px solid #707070;
+    /* Радиус границы: 5px */
+    border-radius: 5px;
+    /* Высота строки: 1 */
+    line-height: 1;
+}
+
+/* Класс элемента select_image */
+.select__image {
+    /* Позиционирование: абсолютное */
+    position: absolute;
+    /* Смещение справа: 3% */
+    right: 3%;
+    /* Смещение сверху: 65% */
+    top: 65%;
+}
+
+/* Класс элемента radio */
+.radio {
+    /* Режим отображения: не отображать */
+    display: none;
+}
+
+/* Класс элемента .custom-radio */
+.custom-radio {
+    /* Режим отображения: строчный блок */
+    display: inline-block;
+    /* Ширина: 20px */
+    width: 20px;
+    /* Высота: 20px */
+    height: 20px;
+    /* Скругление границы: 50% */
+    border-radius: 50%;
+    /* Граница элемента: толщина 1px, линия без пунктира, серый цвет */
+    border: 1px solid #707070;
+}
+
+/* Класс элемента .custom-radio__checked */
+.custom-radio__checked {
+    /* Режим отображения: не отображать */
+    display: none;
+    /* Ширина: 10px */
+    width: 10px;
+    /* Высота: 10px */
+    height: 10px;
+    /* Внешний отступ сверху: 5 px */
+    margin-top: 5px;
+    /* Внешний отступ слева: 5 px */
+    margin-left: 5px;
+    /* Скругление границы: 50% */
+    border-radius: 50%;
+}
+
+/* Класс элементов .custom-radio__text .custom-checkbox__text */
+.custom-radio__text, .custom-checkbox__text {
+    /* Позиционирование: абсолютное */
+    position: absolute;
+    /* Смещение слева: 30px */
+    left: 30px;
+    /* Смещение сверху: 1px */
+    top: 1px;
+}
+
+/* Класс элемента .custom-radio__label */
+.custom-radio__label {
+    /* Внешний отступ сверху: 8 px */
+    margin-top: 8px;
+}
+
+/* Селектор элемента custom-radio__checked, котрый расположен в блоке custom-radio, 
+который расположен рядом с выбраной радиокнопкой */
+.radio:checked + .custom-radio .custom-radio__checked {
+    /* Режим отображения: блок */
+    display: block;
+    /* Цвет фона: серый */
+    background-color: #707070;
+}
+
+/* Селектор элемента custom-radio__checked, котрый расположен в блоке custom-radio, 
+который расположен рядом с выбраной и выключенной радиокнопкой */
+.radio:disabled:checked + .custom-radio .custom-radio__checked {
+    /* Режим отображения: блок */
+    display: block;
+    /* Цвет фона: серый */
+    background-color: #A9A9A9;
+}
+
+/* Класс элемента checkbox */
+.checkbox {
+    /* Режим отображения: не отображать */
+    display: none;
+}
+
+/* Класс элемента .custom-checkbox */
+.custom-checkbox {
+    /* Режим отображения: строчный блок */
+    display: inline-block;
+    /* Ширина: 20px */
+    width: 20px;
+    /* Высота: 20px */
+    height: 20px;
+    /* Граница элемента: толщина 1px, линия без пунктира, серый цвет */
+    border: 1px solid #707070;
+}
+
+/* Класс элемента .custom-checkbox__checked */
+.custom-checkbox__checked {
+    /* Режим отображения: не отображать */
+    display: none;
+     /* Ширина: 14px */
+     width: 14px;
+     /* Высота: 14px */
+     height: 14px;
+    /* Внешний отступ сверху: 3 px */
+    margin-top: 3px;
+    /* Внешний отступ слева: 3 px */
+    margin-left: 3px;
+}
+
+/* Селектор элемента custom-checkbox__checked, котрый расположен в блоке custom-checkbox, 
+который расположен рядом с выбранным чекбоксом */
+.checkbox:checked + .custom-checkbox .custom-checkbox__checked {
+    /* Режим отображения: блок */
+    display: block;
+    /* Цвет фона: серый */
+    background-color: #707070;
+}
+
+/* Класс элеменов textfield, textarea */
+.textfield, .textarea {
+    /* Ширина: 100% */
+    width: 100%;
+    /* Размер шрифта: 16 px */
+    font-size: 16px;
+    /* Семейство шрифта: Fira Sans */
+    font-family: 'Fira Sans';
+    /* Внутренний отступ: 10px */
+    padding: 10px;
+    /* Граница элемента: толщина 1px, линия без пунктира, серый цвет */
+    border: 1px solid #707070;
+    /* Радиус границы: 5px */
+    border-radius: 5px;
+    /* Вписывание в контейнер: границы контейнера */
+    box-sizing: border-box;
+}
+
+/* Класс элемента .textfield_counter */
+.textfield_counter {
+    /* Цвет: серый */
+    color: #A9A9A9;
+    /* Граница: нет */
+    border: none;
+    /* Внутренний отступ: 0 */
+    padding: 0;
+}
+
+/* Класс элемента textarea */
+.textarea {
+    /* Изменение размера: запрещено */
     resize: none;
+}
+
+/* Класс элемента buttons */
+.buttons {
+    /* Режим отображения: гибкий */
+    display: flex;
+    /* Распределение контента по горизнтали: равные расстояния ежду линиями */
+    justify-content: space-between;
+    /* Внешний отступ сверху: 25 px */
+    margin-top: 25px;
+}
+
+/* Класс элемента button */
+.button {
+    /* Стандартное офрмление (вебкит): отключить */
+    -webkit-appearance: none;
+    /* Стандартное офрмление (мозилла): отключить */
+    -moz-appearance: none;
+    /* Стандартное офрмление: отключить */
+    appearance: none;
+    /* Стандартное офрмление (микрософт): отключить */
+    -ms-appearance: none;
+    /* Ширина: 200 px */
+    width: 200px;
+    /* Высота: 40 px */
+    height: 40px;
+    /* Размер шрифта: 16 px */
+    font-size: 16px;
+    /* Семейство шрифта: Fira Sans */
+    font-family: 'Fira Sans';
+    /* Внутренний отступ: 10px */
+    padding: 10px;
+    /* Граница элемента: толщина 1px, линия без пунктира, серый цвет */
+    border: 1px solid #707070;
+    /* Радиус границы: 20px */
+    border-radius: 20px;
+    /* Цвет фона: белый */
+    background-color: white;
+}
+
+/* Класс элемента button в активном состоянии */
+.button:active {
+    /* Цвет фона: светлый */
+    background-color:#eee;
+    /* Цвет: наследуемый */
+    color: inherit;
+}
+
+/* Класс элемента button_submit */
+.button_submit {
+    /* Цвет фона: синий */
+    background-color: #0077FF;
+    /* Цвет: белый */
+    color: white;
+}
+
+/* Класс элемента button_submit в активном состоянии */
+.button_submit:active{
+    /* Цвет фона: лазурный */
+    background-color: #0045FF;
+    /* Цвет: белый */
+    color: white;
 }

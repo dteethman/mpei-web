@@ -1,6 +1,7 @@
 <!-- Актуальный справочник по HTML: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference -->
 <!-- Сверстано по методологии БЭМ: https://ru.bem.info/methodology/ -->
-<!-- Используется grid, проверьте совй бразуер на совместимость: https://caniuse.com/css-grid -->
+<!-- Используется grid, проверьте свой браузер на совместимость: https://caniuse.com/css-grid -->
+<!-- Используется flex, проверьте свой браузер на совместимость: https://caniuse.com/flexbox -->
 
 <!-- Сообщение браузеру об использовании спецификации html -->
 <!DOCTYPE html>
@@ -32,12 +33,12 @@
         </div>
         <!-- Тег form задает изображения; блок form -->
         <form action="" class="form" id="form">
-            <!-- Тег label задает подпись к составной части формы; блок label -->
-            <label class="label">
-                <!-- Тег span задает обособленный текст; блок label, модификатор text -->
+            <!-- Тег label задает подпись к составной части формы; блок label, модификатор select -->
+            <label class="label label_select">
+                <!-- Тег span задает обособленный текст; блок label, элемент text -->
                 <span class="label__text">Рамка</span>
-                <!-- Тег select задает выпадающий список -->
-                <select name="border" id="border">
+                <!-- Тег select задает выпадающий список; блок select -->
+                <select name="border" id="border" class="select">
                     <!-- Тег option задает элемент выпадающего списка, атрибут selected - выбран по умолчанию -->
                     <option selected value="img/1.png">Жизнерадостная</option>
                     <!-- Тег option задает элемент выпадающего списка -->
@@ -49,55 +50,66 @@
                     <!-- Тег option задает элемент выпадающего списка -->
                     <option value="img/5.png">Блистательная</option>
                 </select>
+                <!-- Тег img задает изображения; блок select, элемент image -->
+                <img src="img/select-arrow.png" alt=">" class="select__image">
             </label>
             <!-- Тег label задает подпись к составной части формы; блок label -->
             <label class="label">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа чекбокс -->
-                <input checked type="checkbox" name="greeting" id="greeting">
-                <!-- Тег span задает обособленный текст -->
-                <span>Обращение</span>
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа чекбокс, блок checkbox -->
+                <input checked type="checkbox" name="greeting" id="greeting" class="checkbox">
+                <!-- Тег div задает блок, внешний див для границы чекбокса, блок custom-checkbox -->
+                <!-- Тег div задает блок, внутренний див для заливки чекбокса, блок custom-checkbox, элемент checked -->
+                <div class="custom-checkbox"><div class="custom-checkbox__checked"></div></div>
+                <!-- Тег span задает обособленный текст, блок custom-checkbox, элемент text-->
+                <span class="custom-checkbox__text">Обращение</span>
             </label>
             <!-- Тег label задает подпись к составной части формы; блок label -->
             <label class="label">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа радиокнопка -->
-                <input checked type="radio" name="gender" id="gender_male" value="male">
-                <!-- Тег span задает обособленный текст -->
-                <span>Дорогой</span>
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа радиокнопка, блок radio -->
+                <input checked type="radio" name="gender" id="gender_male" value="male" class="radio">
+                <!-- Тег div задает блок, внешний див для границы радиокнопки, блок custom-radio -->
+                <!-- Тег div задает блок, внутренний див для заливки радиокнопки, блок custom-radio, элемент checked -->
+                <div class="custom-radio"><div class="custom-radio__checked"></div></div>
+                <!-- Тег span задает обособленный текст, блок custom-radio, элемент text-->
+                <span class="custom-radio__text">Дорогой</span>
+            </label>
+            <!-- Тег label задает подпись к составной части формы; блок label, блок custom-radio: элемент label-->
+            <label class="label custom-radio__label">
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа радиокнопка блок radio -->
+                <input type="radio" name="gender" id="gender_female" value="female" class="radio">
+                <!-- Тег div задает блок, внешний див для границы радиокнопки, блок custom-radio -->
+                <!-- Тег div задает блок, внутренний див для заливки радиокнопки, блок custom-radio, элемент checked -->
+                <div class="custom-radio"><div class="custom-radio__checked"></div></div>
+                <!-- Тег span задает обособленный текст, блок custom-radio, элемент text-->
+                <span class="custom-radio__text">Дорогая</span>
             </label>
             <!-- Тег label задает подпись к составной части формы; блок label -->
             <label class="label">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа радиокнопка -->
-                <input type="radio" name="gender" id="gender_female" value="female">
-                <!-- Тег span задает обособленный текст -->
-                <span>Дорогая</span>
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа текстовое поле; блок textfield -->
+                <input type="text" name="person" id="person" placeholder="Вениамин Семенович" class="textfield">
             </label>
             <!-- Тег label задает подпись к составной части формы; блок label -->
             <label class="label">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа текстовое поле -->
-                <input type="text" name="person" id="person" placeholder="Вениамин Семенович">
-            </label>
-            <!-- Тег label задает подпись к составной части формы; блок label -->
-            <label class="label">
-                <!-- Тег span задает обособленный текст; блок label, модификатор text -->
+                <!-- Тег span задает обособленный текст; блок label, элемент text -->
                 <span class="label__text">Текст поздравления</span>
                 <!-- Тег textarea задает поле ввода многострочного текста; блок textarea -->
                 <textarea name="message" id="message" cols="25" rows="6" maxlength="150" wrap="soft" class="textarea"></textarea>
             </label>
-            <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа текстовое поле, неизменяемый -->
-            <input type="text" name="count" id="count" value="Введено символов: 0/150" readonly>
+            <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа текстовое поле, неизменяемый, блок textfield, модификатор counter-->
+            <input type="text" name="count" id="count" value="Введено символов: 0/150" readonly class="textfield textfield_counter">
             <!-- Тег label задает подпись к составной части формы; блок label -->
             <label class="label">
-                <!-- Тег span задает обособленный текст; блок label, модификатор text -->
+                <!-- Тег span задает обособленный текст; блок label, элемент text -->
                 <span class="label__text">Секретный пароль</span>
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа поле пароля -->
-                <input type="password" name="password" id="password">
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут типа поле пароля, блок textfield -->
+                <input type="password" name="password" id="password" class="textfield">
             </label>
             <!-- Тег div задает блок вложенных элементов; блок buttons -->
             <div class="buttons">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут кнопка сброса -->
-                <input type="reset" value="Сбросить" id="reset">
-                <!-- Тег input задает элемент взаимодействия пользователя, атрибут кнопка отправки формы -->
-                <input type="submit" value="Сгенерировать" id="submit">
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут кнопка сброса; блок button -->
+                <input type="reset" value="Сбросить" id="reset" class="button">
+                <!-- Тег input задает элемент взаимодействия пользователя, атрибут кнопка отправки формы; блок button, модификатор submit -->
+                <input type="submit" value="Сгенерировать" id="submit" class="button button_submit">
             </div>
         </form>
     </div>
